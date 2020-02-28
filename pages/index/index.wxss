@@ -12,3 +12,10 @@
   font-size: 12px;
   color: #ccc;
 }
+.swiper{
+  height: 340rpx;
+}
+.swiper image{
+  width: 750rpx;
+  height: 340rpx;
+}
