@@ -30,7 +30,7 @@
   height: 140rpx
 }
 .floor-titel{
-  margin-bottom: 20rpx
+  margin: 10rpx 0
 }
 .floor-titel image{
   width: 100%;
@@ -60,4 +60,10 @@
   width: 223rpx;
   height: 188rpx;
   margin-bottom: 5px
+}
+.floor + .floor .floor-right image{
+  width: 193rpx
+}
+.floor + .floor .floor-right image:nth-child(3n+1){
+  width: 273rpx
 }

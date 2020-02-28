@@ -34,19 +34,18 @@
   </view>
 
   <!-- 楼层部分 -->
-  <view class="floor">
+  <view class="floor" wx:for="{{floor}}" wx:key="index">
     <view class="floor-titel">
-      <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_title.png"></image>
+      <image mode="aspectFill" src="{{item.floor_title.image_src}}"></image>
     </view>
     <view class="floor-conten">
       <view class="floor-left">
-        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_1@2x.png"></image>
+        <image mode="aspectFill" src="{{item.product_list[0].image_src}}"></image>
       </view>
       <view class="floor-right">
-        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_3@2x.png"></image>
-        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_3@2x.png"></image>
-        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_3@2x.png"></image>
-        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_3@2x.png"></image>
+       <block wx:for="{{item.product_list}}" wx:key="index" wx:if="{{index > 0}}">
+        <image mode="aspectFill" src="{{item.image_src}}"></image>
+      </block>
       </view>
     </view>
   </view>

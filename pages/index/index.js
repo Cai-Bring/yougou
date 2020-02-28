@@ -2,7 +2,8 @@ import request from "../../utils/request.js"
 Page({
   data:{
     banners:[], //轮播图
-    navs:[] // 导航
+    navs:[], // 导航
+    floor:[] // 楼层
   },
   onLoad(){
     // 请求得到轮播图
@@ -30,6 +31,17 @@ Page({
       })
       this.setData({
         navs: navdata
+      })
+    })
+
+    // 获取楼层信息
+    request({
+      url:'/home/floordata'
+    }).then(res=>{
+      // console.log(res)
+      const {message} = res.data
+      this.setData({
+        floor:message
       })
     })
   }
