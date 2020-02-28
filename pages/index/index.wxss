@@ -67,3 +67,18 @@
 .floor + .floor .floor-right image:nth-child(3n+1){
   width: 273rpx
 }
+.toTop{
+  font-size: 20rpx;
+  color: #ccc;
+  height: 90rpx;
+  width: 90rpx;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 50rpx;
+  right: 20rpx;
+}

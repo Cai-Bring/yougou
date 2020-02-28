@@ -3,7 +3,8 @@ Page({
   data:{
     banners:[], //轮播图
     navs:[], // 导航
-    floor:[] // 楼层
+    floor:[], // 楼层
+    topshow: false // 是否显示返回顶部
   },
   onLoad(){
     // 请求得到轮播图
@@ -43,6 +44,28 @@ Page({
       this.setData({
         floor:message
       })
+    })    
+  },
+  // 返回顶部的方法
+  gototop(){
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 500
+    })
+  },
+  // 监听用户是否滚动
+  onPageScroll(e){
+    let isshow = false
+    const {scrollTop} = e
+    // console.log(scrollTop)
+    if (scrollTop>100){
+      isshow=true
+    }else{
+      isshow = false
+    }
+    if (isshow == this.data.topshow) return;
+    this.setData({
+      topshow:isshow
     })
   }
 })

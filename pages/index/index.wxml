@@ -49,4 +49,10 @@
       </view>
     </view>
   </view>
+
+  <!-- 回到顶部 -->
+  <view class="toTop" wx:if="{{topshow}}" bindtap="gototop">
+    <view class="iconfont icon-top-1-copy"></view>
+    顶部
+  </view>
 </view>
