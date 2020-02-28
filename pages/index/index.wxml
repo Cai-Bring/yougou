@@ -11,7 +11,7 @@
   </navigator>
 
   <!-- 轮播图部分 -->
-   <swiper indicator-dots
+  <swiper indicator-dots
         autoplay interval="3000"
         indicator-color
         circular
@@ -22,14 +22,32 @@
             <image src="{{item.image_src}}" mode="aspectFill"></image>
           </swiper-item>
         </block>
-    </swiper>
+  </swiper>
 
     <!-- 导航部分 -->
-    <view class="navs">
+  <view class="navs">
         <block wx:for="{{navs}}" wx:key="index">
         <navigator url="{{item.url}}" open-type="{{item.open_type}}">
         <image src="{{item.image_src}}" mode="aspectFill"></image>
          </navigator>
         </block>
+  </view>
+
+  <!-- 楼层部分 -->
+  <view class="floor">
+    <view class="floor-titel">
+      <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_title.png"></image>
     </view>
+    <view class="floor-conten">
+      <view class="floor-left">
+        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_1@2x.png"></image>
+      </view>
+      <view class="floor-right">
+        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_3@2x.png"></image>
+        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_3@2x.png"></image>
+        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_3@2x.png"></image>
+        <image mode="aspectFill" src="https://api-hmugo-web.itheima.net/pyg/pic_floor01_3@2x.png"></image>
+      </view>
+    </view>
+  </view>
 </view>
