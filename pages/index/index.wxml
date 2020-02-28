@@ -22,5 +22,14 @@
             <image src="{{item.image_src}}" mode="aspectFill"></image>
           </swiper-item>
         </block>
-      </swiper>
+    </swiper>
+
+    <!-- 导航部分 -->
+    <view class="navs">
+        <block wx:for="{{navs}}" wx:key="index">
+        <navigator url="{{item.url}}" open-type="{{item.open_type}}">
+        <image src="{{item.image_src}}" mode="aspectFill"></image>
+         </navigator>
+        </block>
+    </view>
 </view>
