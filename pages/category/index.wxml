@@ -1,2 +1,31 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<view class="category">
+  <!-- 顶部搜索部分 -->
+  <topsearch></topsearch>
+  <view class="categorylist">
+    <view class="left">
+      <block wx:for="{{ list }}" wx:key="index">
+        <view class="left-item {{index===mywatch?'active':''}}" bindtap="towatch" data-index="{{index}}">{{item.cat_name}}</view>
+      </block>
+    </view>
+    <view class="right">
+      <block wx:for="{{list[mywatch].children}}" wx:key="index">
+        <view class="right-item">
+            <view class="right-title">
+            /　<text>{{item.cat_name}}</text>　/
+            </view>
+            <view class="right-list">
+              <block wx:for="{{item.children}}" wx:key="index">
+                <navigator url="">
+                  <image 
+                  src="{{item.cat_icon}}" 
+                  mode="widthFix">
+                  </image>
+                  <view>{{item.cat_name}}</view>
+                </navigator>
+              </block>
+            </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
