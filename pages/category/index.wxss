@@ -1,5 +1,5 @@
 .categorylist{
-  position: fixed;
+  position: absolute;
   top: 100rpx;
   bottom: 0;
   display: flex;

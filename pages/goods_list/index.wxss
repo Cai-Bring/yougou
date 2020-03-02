@@ -1,0 +1,99 @@
+.search{
+  width: 750rpx;
+  height: 120rpx;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search_input{
+  width: 690rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding-left: 30rpx;
+}
+.search_input input{
+  flex: 1;
+  font-size: 14px;
+  color: #333333;
+  padding:0 15rpx;
+}
+.show_nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 110rpx;
+  border-bottom: 1px solid #ccc;
+  color:#3b3b3b;
+  font-size: 14px;
+}
+.show_nav .active{
+  color: #ff2d4a;
+}
+.show_nav .price{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show_nav .price .price_icon{
+  margin-left: 5px;
+}
+.show_nav .price .price_icon .iconfont{
+  font-size: 6px;
+  color: #efefef;
+}
+.show_nav .price .price_icon .price_active{
+  color: #3b3b3b;
+  padding: 3px 0;
+}
+.shopping{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+  height: 230rpx;
+}
+.shopping .photo {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 10rpx;
+}
+.shopping .photo image {
+  width: 200rpx;
+  height: 200rpx;
+}
+.shopping .content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-size: 14px;
+}
+.shopping .content .goods_name{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.shopping .content .price{
+  color: #ff2d4a
+}
+.shopping .content .price .goods_price{
+  font-size: 20px
+}
+scroll-view{
+  position: absolute;
+  top: 230rpx;
+  bottom: 0
+}
+.hadnone{
+  display: block;
+  width: 100%;
+  padding: 30rpx 0;
+  text-align: center;
+}

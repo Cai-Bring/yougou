@@ -1,17 +1,4 @@
-.search{
-  background: #ff2d4a;
-  padding: 20rpx
-}
-.search-input{
-  background: #fff;
-  border-radius: 4px;
-  height: 60rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  color: #ccc;
-}
+
 .swiper{
   height: 340rpx;
 }

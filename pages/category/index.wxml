@@ -15,7 +15,7 @@
             </view>
             <view class="right-list">
               <block wx:for="{{item.children}}" wx:key="index">
-                <navigator url="">
+                <navigator url="/pages/goods_list/index?cid={{item.cat_id}}&query={{item.cat_name}}">
                   <image 
                   src="{{item.cat_icon}}" 
                   mode="widthFix">

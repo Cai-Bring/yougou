@@ -1,0 +1,30 @@
+<view class="search">
+    <view class="search_input">
+      <icon type="search" color="#ccc" size="20"/>
+      <input placeholder="请输入关键字" confirm-type="search"></input>
+    </view>
+</view>
+<view class="show_nav">
+  <view bindtap="show_all" class="{{active===0?'active':''}}">综合</view>
+  <view bindtap="show_nub" class="{{active===1?'active':''}}">销量</view>
+  <view class="price" bindtap="price_up">价格
+      <view class="price_icon">
+        <view class="iconfont icon-up  {{priceActive===0?'price_active':''}}" ></view>
+        <view class="iconfont icon-down {{priceActive===1?'price_active':''}}"></view>
+      </view>
+  </view>
+</view>
+<scroll-view scroll-y="true" bindscrolltolower="loadding"> 
+ <block wx:for="{{list}}" wx:key="index">
+  <view class="shopping" >
+    <view class="photo">
+      <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+    </view>
+    <view class="content">
+      <text class="goods_name">{{item.goods_name}}</text>
+      <text class="price">￥ <text class="goods_price">{{item.goods_price}}</text>.00</text>
+    </view>
+  </view>
+ </block>
+ <text class="hadnone" wx:if="{{hadnone}}">已经没有数据了哦</text>
+</scroll-view>
