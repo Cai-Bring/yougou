@@ -1,6 +1,5 @@
 
 .swiper{
-  padding-top: 100rpx;
   height: 340rpx;
 }
 .swiper image{
