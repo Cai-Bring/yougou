@@ -1,7 +1,7 @@
 <view class="search">
     <view class="search_input">
       <icon type="search" color="#ccc" size="20"/>
-      <input placeholder="请输入关键字" confirm-type="search"></input>
+      <input placeholder="请输入关键字" confirm-type="search" value="{{query}}"></input>
     </view>
 </view>
 <view class="show_nav">

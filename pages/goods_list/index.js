@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    query:'',
     priceActive:1,
     active:0,
     list:[],
@@ -20,6 +21,7 @@ Page({
   onLoad(option) {
     // console.log(option)
     this.setData({
+      query: option.query,
       cid:option.cid
     })
     request({
