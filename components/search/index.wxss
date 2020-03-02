@@ -1,6 +1,11 @@
 .search{
   background: #ff2d4a;
-  padding: 20rpx
+  padding: 20rpx;
+  position: fixed;
+  top: 0;
+  width: 750rpx;
+  z-index: 100;
+  box-sizing: border-box;
 }
 .search-input{
   background: #fff;

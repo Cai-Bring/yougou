@@ -1,7 +1,9 @@
 .categorylist{
-  position: absolute;
+  /* position: absolute;
   top: 100rpx;
-  bottom: 0;
+  bottom: 0; */
+  padding-top: 100rpx;
+  height: 91vh;
   display: flex;
   width: 750rpx;
   justify-content: space-between
