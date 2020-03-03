@@ -1,0 +1,50 @@
+<view class="goods">
+  <!-- 详情图 -->
+  <view class="pics">
+   <swiper indicator-dots>
+    <block wx:for="{{list.pics}}" wx:key="index">
+      <swiper-item>
+          <image src="{{item.pics_big_url}}" mode="widthFix"></image>
+      </swiper-item>
+    </block>
+   </swiper>
+  </view>
+  <!-- 价格 -->
+  <view class="price">￥{{list.goods_price}} </view>
+  <!-- 详情 -->
+  <view class="details">
+    <view class="listname">{{list.goods_name}}</view>
+    <view class="collect">
+      <view class="iconfont icon-shoucang"></view>
+      <text>收藏</text>
+    </view>
+  </view>
+  <!-- 快递 -->
+  <view class="express">
+    快递：　免运费
+  </view>
+  <!-- 边框 -->
+  <view class="border"></view>
+  <!-- 促销 -->
+  <view class="promotion">
+    <text>促销</text>
+    <text class="welfare">满300减30元</text>
+  </view>
+</view>
+<!-- 购物车 -->
+<view class="car">
+  <view class="service">
+    <view class="customer"> 
+      <view class="iconfont icon-kefu"></view>
+      <text>联系客服</text>
+    </view>
+    <view class="mycar"> 
+      <view class="iconfont icon-gouwuche1"></view>
+      <text>购物车</text>
+    </view>
+  </view>
+  <view class="tocar">
+  加入购物车
+  </view>
+  <view class="buy">立即购买</view>
+</view>

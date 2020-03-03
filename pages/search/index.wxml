@@ -6,7 +6,7 @@
   <view class="quxiao" bindtap="navback" wx:if="{{theinput}}">取消</view>
   <view class="searchlist" wx:if="{{list.length}}">
     <block wx:for="{{list}}" wx:key="index">
-      <navigator url="" class="list">{{item.goods_name}}</navigator>
+      <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" class="list">{{item.goods_name}}</navigator>
     </block>
   </view>
 </view>

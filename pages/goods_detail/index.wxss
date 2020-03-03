@@ -1,0 +1,105 @@
+.goods{
+  padding-bottom: 100rpx;
+}
+.pics image{
+  width: 750rpx;
+}
+.pics{
+  height: 750rpx;
+}
+.pics swiper{
+  height: 100%;
+}
+.price{
+  color: #ff2d4a;
+  padding: 30rpx 10rpx;
+  font-size: 24px
+}
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.listname{
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  padding-right: 50rpx;
+  padding-left: 30rpx;
+}
+.collect{
+  width: 150rpx;
+  text-align: center;
+  border-left: 1px solid #9d9c9d;
+  font-size: 12px;
+  color: #ccc;
+}
+.collect .iconfont{
+  font-size: 16px !important;
+  margin-bottom: 5px;
+}
+.express{
+  padding: 30rpx;
+  font-size: 14px;
+  color: #9d9c9d;
+}
+.border{
+  width: 100%;
+  border-bottom: 20rpx solid #f5f5f5
+}
+.promotion{
+  padding: 30rpx;
+}
+.promotion .welfare{
+  color: #ff2d4a;
+  margin-left: 30rpx;
+}
+.car{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+}
+.tocar{
+  width: 215rpx;
+  height: 100%;
+  background-color: #ffb517;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+}
+.buy{
+  width: 215rpx;
+  height: 100%;
+  line-height: 100rpx;
+  background-color: #ff2d4a;
+  text-align: center;
+  color: #fff;
+}
+.service{
+  background-color: #fff;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+  color: #9d9c9d;
+  font-size: 13px;
+}
+.service .iconfont{
+  font-size: 20px;
+  color: #ff2d4a;
+}
+.customer,.mycar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

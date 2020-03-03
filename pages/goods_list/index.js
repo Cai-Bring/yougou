@@ -75,31 +75,29 @@ Page({
       pagenum:num
     })
     // 判断是否是正在加载中，如果是，则不执行获取数据
-    setTimeout(()=>{
-      request({
-        url: "/goods/search",
-        data: {
-          query: this.data.query,
-          pagenum: this.data.pagenum,
-          pagesize: this.data.pagesize
-        }
-      }).then(res => {
-        // console.log(res)
-        let { goods } = res.data.message
-        // console.log(goods)
-        let oldlist = this.data.list
-        // console.log(oldlist)
-        oldlist.push(...goods)
-        this.setData({
-          list: oldlist,
-          isloadding: false// 获取成功后才讲加载中状态取消
-        })
-        if (this.data.list.length >= res.data.message.total) {
-          this.setData({
-            hadnone: true
-          })
-        }
+    request({
+      url: "/goods/search",
+      data: {
+        query: this.data.query,
+        pagenum: this.data.pagenum,
+        pagesize: this.data.pagesize
+      }
+    }).then(res => {
+      // console.log(res)
+      let { goods } = res.data.message
+      // console.log(goods)
+      let oldlist = this.data.list
+      // console.log(oldlist)
+      oldlist.push(...goods)
+      this.setData({
+        list: oldlist,
+        isloadding: false// 获取成功后才讲加载中状态取消
       })
-    },2000)
+      if (this.data.list.length >= res.data.message.total) {
+        this.setData({
+          hadnone: true
+        })
+      }
+    })
   }
 })
