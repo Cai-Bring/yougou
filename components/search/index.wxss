@@ -12,3 +12,10 @@
   font-size: 12px;
   color: #ccc;
 }
+.newSearch{
+  background-color: #efefef;
+}
+.isSearch{
+  color: #3b3b3b;
+  justify-content: left
+}

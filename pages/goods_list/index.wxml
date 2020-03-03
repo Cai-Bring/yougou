@@ -1,9 +1,4 @@
-<view class="search">
-    <view class="search_input">
-      <icon type="search" color="#ccc" size="20"/>
-      <input placeholder="请输入关键字" confirm-type="search" value="{{query}}"></input>
-    </view>
-</view>
+<topsearch query="{{query}}" newSearch="newSearch" isSearch="isSearch" ></topsearch>
 <view class="show_nav">
   <view bindtap="show_all" class="{{active===0?'active':''}}">综合</view>
   <view bindtap="show_nub" class="{{active===1?'active':''}}">销量</view>
@@ -27,4 +22,5 @@
   </view>
  </block>
  <text class="hadnone" wx:if="{{hadnone}}">已经没有数据了哦</text>
+ <text class="hadnone" wx:if="{{!hadnone}}">正在拼命加载中</text>
 </scroll-view>

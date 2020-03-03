@@ -4,14 +4,24 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    query:{
+      type:String,
+      value:"搜索"
+    },
+    isSearch:{
+      type:String,
+      value:""
+    },
+    newSearch:{
+      type:String,
+      value:""
+    }
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-
   },
 
   /**

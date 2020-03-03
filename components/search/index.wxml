@@ -1,9 +1,9 @@
 <!--components/search/index.wxml-->
   <navigator url="">
-    <view class="search">
-      <view class="search-input">
+    <view class="search {{newSearch}}">
+      <view class="search-input {{isSearch}}">
          <icon type="search" color="#ccc" size="20"/>
-         搜索
+         {{query}}
       </view>
     </view>
   </navigator>
