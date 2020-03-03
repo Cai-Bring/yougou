@@ -1,9 +1,11 @@
 <!--components/search/index.wxml-->
-  <navigator url="">
+
     <view class="search {{newSearch}}">
+      <navigator url="/pages/search/index">
       <view class="search-input {{isSearch}}">
          <icon type="search" color="#ccc" size="20"/>
          {{query}}
       </view>
+        </navigator>
     </view>
-  </navigator>
+

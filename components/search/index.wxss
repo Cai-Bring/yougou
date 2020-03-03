@@ -3,6 +3,7 @@
   padding: 20rpx;
 }
 .search-input{
+  padding: 0 20rpx;
   background: #fff;
   border-radius: 4px;
   height: 60rpx;

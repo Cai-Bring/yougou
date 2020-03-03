@@ -1,2 +1,25 @@
-<!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<view class="search">
+  <view class="search-input">
+    <icon type="search" color="#ccc" size="20"/>
+    <input confirm-type="search" focus placeholder="请输入你想要的商品" bindconfirm="gogogo" bindinput="isinput" bindblur="isblur" value="{{theinput}}"></input>
+  </view>
+  <view class="quxiao" bindtap="navback" wx:if="{{theinput}}">取消</view>
+  <view class="searchlist" wx:if="{{list.length}}">
+    <block wx:for="{{list}}" wx:key="index">
+      <navigator url="" class="list">{{item.goods_name}}</navigator>
+    </block>
+  </view>
+</view>
+<view class="history">
+  <view class="historyNav">
+    <text>历史搜索</text>
+    <view class="iconfont icon-quxiao" bindtap="clearhistory"></view>
+  </view>
+  <view class="hisContent">
+    <block wx:for="{{history}}" wx:key="index">
+      <view bindtap="toHistory" data-index="{{item}}">
+        <navigator url="/pages/goods_list/index?query={{item}}">{{item}}</navigator>
+      </view>
+    </block>
+  </view>
+</view>

@@ -84,7 +84,7 @@ Page({
           pagesize: this.data.pagesize
         }
       }).then(res => {
-        console.log(res)
+        // console.log(res)
         let { goods } = res.data.message
         // console.log(goods)
         let oldlist = this.data.list
