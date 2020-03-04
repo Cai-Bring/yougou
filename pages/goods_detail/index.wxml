@@ -4,7 +4,7 @@
    <swiper indicator-dots>
     <block wx:for="{{list.pics}}" wx:key="index">
       <swiper-item>
-          <image src="{{item.pics_big_url}}" mode="widthFix"></image>
+          <image src="{{item.pics_big_url}}" mode="widthFix" bindtap="choosePhoto" data-index="{{index}}"></image>
       </swiper-item>
     </block>
    </swiper>
@@ -29,6 +29,21 @@
   <view class="promotion">
     <text>促销</text>
     <text class="welfare">满300减30元</text>
+  </view>
+  <!-- 商品导航介绍  -->
+  <view class="goodnav">
+    <view wx:for="{{['商品详情','规格']}}"
+     wx:key="index" 
+     class="{{current==index?'goodActive':''}}"
+     bindtap="goodnav"
+     data-index="{{index}}">{{item}}</view>
+  </view>
+  <!-- 商品详情 -->
+  <rich-text wx:if="{{current==0}}" nodes="{{list.goods_introduce}}"></rich-text>
+  <!-- 商品规格 -->
+  <view class="attrs" wx:if="{{current==1}}"  wx:for="{{list.attrs}}" wx:key="index">
+    <view>{{item.attr_name}}：</view>
+    <view>{{item.attr_vals}}</view>
   </view>
 </view>
 <!-- 购物车 -->

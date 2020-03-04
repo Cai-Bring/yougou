@@ -103,3 +103,21 @@
   align-items: center;
   flex-direction: column;
 }
+.goodnav{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.goodnav view{
+  flex: 1;
+  border-bottom: 3px solid #ccc;
+  padding: 10rpx 20rpx;
+  text-align: center;
+}
+.goodnav .goodActive{
+  border-bottom: 3px solid #ff2d4a;
+}
+.attrs{
+  display: flex;
+  padding: 15rpx 30rpx;
+}
