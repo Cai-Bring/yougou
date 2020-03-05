@@ -93,12 +93,24 @@
   color: #9d9c9d;
   font-size: 13px;
 }
+.service .btnbox{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.service .btn{
+  height: 100%;
+  width: 100%;
+  opacity:0;
+}
 .service .iconfont{
   font-size: 20px;
   color: #ff2d4a;
 }
 .customer,.mycar{
+  width: 50%;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   flex-direction: column;

@@ -52,7 +52,7 @@
 					"id": 0,
 					"name": "pages/index/index",
 					"pathName": "pages/index/index",
-					"query": "",
+					"query": "goods_id=43982",
 					"scene": null
 				}
 			]

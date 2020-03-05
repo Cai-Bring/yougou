@@ -41,6 +41,10 @@ Page({
   },
   price_up(){
     let priceactive = this.data.priceActive
+    wx.showToast({
+      title: '暂不支持此功能',
+      duration: 2000
+    })
     if (priceactive==0){
       priceactive=1
     }else{
@@ -56,6 +60,12 @@ Page({
     })
   },
   show_nub() {
+    wx.showToast({
+      title: '暂不支持此功能',
+      image:'../../images/loading.svg',
+      duration: 2000
+    })
+    return;
     this.setData({
       active: 1
     })

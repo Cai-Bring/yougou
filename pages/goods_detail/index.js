@@ -46,5 +46,11 @@ Page({
       current: list[index], // 当前显示图片的http链接
       urls: list // 需要预览的图片http链接列表
     })
+  },
+  // 购物车跳转
+  tocar(){
+    wx.switchTab({
+      url: '/pages/cart/index'
+    })
   }
 })
