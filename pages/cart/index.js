@@ -94,27 +94,27 @@ Page({
       this.calculate();
     }
   },
-  // 输入框输入数量时触发
-  isinput(e){
+  // 输入框点击完成时
+  isok(e){
     // console.log(e)
     let val = e.detail.value
     const { index } = e.target.dataset
     // 如果输入不是数字或者输入结果小于0
-    if (!Boolean(+val) || val < 0){
+    if (!Boolean(+val) || val < 0) {
       wx.showToast({
         title: '请正确输入',
         icon: 'none',
         duration: 2000
       })
       this.setData({
-        list:this.data.list
+        list: this.data.list
       })
-    }else{
+    } else {
       let list = [...this.data.list]
-      list[index].number=+val
+      list[index].number = +val
       console.log(list)
       this.setData({
-        list:list
+        list: list
       })
       this.calculate()
     }
