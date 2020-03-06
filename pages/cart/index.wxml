@@ -1,11 +1,56 @@
 <view class="content">
   <!-- 联系方式 -->
- <view class="contact">
-    <view class="linkman">收货人:　阿蔡</view>
-    <view class="phone">13421884489  <view class="iconfont icon-you"></view></view>
+ <view class="contact" bindtap="choose_address">
+    <view class="linkman"  wx:if="{{user.userName}}">收货人:　{{user.userName}}</view>
+    <view class="linkman" wx:if="{{!user.userName}}">获取收货地址</view>
+    <view class="phone">{{user.telNumber}}  <view class="iconfont icon-you"></view></view>
  </view>
  <!-- 地址 -->
- <view class="address">收货地址: 广东省广州市天河区珠江新城桥下hhhhhhhhhhhh</view>
+ <view class="address" wx:if="{{user.userName}}">收货地址: {{user.provinceName+user.cityName+user.countyName+user.detailInfo}}</view>
  <!-- 图片 -->
- <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
+ <image src="../../images/cart_border@2x.png" mode="widthFix"></image>
+ <!-- 店铺名称 -->
+ <view class="title">
+  <view class="iconfont icon-shangdian"></view><text>蔡哥哥的生活馆</text>
+ </view>
+ <!-- 产品详情 -->
+ <view class="products" wx:for="{{5}}" wx:key="index">
+  <!-- 产品选择 -->
+  <view class="iconfont icon-weibiaoti-"></view>
+  <!-- 产品图片 -->
+  <image src="http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_200x200.jpg" mode="widthFix"></image>
+  <!-- 产品信息 -->
+  <view class="info">
+    <!-- 产品描述 -->
+    <view class="describe">哈哈哈哈哈哈哈卢本伟牛逼卢本伟牛逼卢本伟牛逼卢本伟牛逼卢本伟牛逼</view>
+    <!-- 产品选择的数量 -->
+    <view class="choose">
+      <!-- 价格 -->
+      <view>￥<text>199</text>.00</view>
+      <!-- 数量 -->
+      <view class="nub">
+      <view class="btn">-</view>
+      <input value="1"></input>
+      <view class="btn">+</view>
+      </view>
+    </view>
+  </view>
+ </view>
+ <!-- 底部购物栏 -->
+ <view class="tobuy">
+ <!-- 全选 -->
+ <view class="cheack-all">
+  <view class="iconfont icon-weibiaoti-"></view>
+  <text>全选</text>
+ </view>
+ <!-- 价格 -->
+  <view class="price-all">
+   <view class="the-price">
+    合计：<view class="all">￥<text>1340</text>.00</view>
+   </view>
+   <view class="freight">包含运费</view>
+  </view>
+  <!-- 结算 -->
+  <view class="gogogo">结算</view>
+ </view>
 </view>

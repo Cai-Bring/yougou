@@ -1,13 +1,17 @@
 /* pages/cart/index.wxss */
 .content{
-  border-bottom: 60rpx solid #f5f5f5;
+  height: 100vh;
   width: 750rpx;
+  background-color: #f5f5f5;
+  padding-bottom: 100rpx;
+  overflow: auto;
 }
 .contact{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 35rpx 30rpx;
+  background-color: #fff;
 }
 .phone{
   display: flex;
@@ -19,8 +23,117 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  background-color: #fff;
 }
-.content image{
+.content>image{
+  display: block;
   width: 100%;
-  height: 15rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.title{
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+.title .iconfont {
+  font-size: 20px;
+  margin-right: 10rpx;
+}
+.products{
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+  width: 750rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+.products .iconfont{
+  color: #ff2d4a;
+  padding: 0 20rpx;
+}
+.products image{
+  width: 200rpx;
+  height: 200rpx;
+  flex-shrink: 0;
+}
+.products .info{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 20rpx;
+}
+.info .describe{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.choose{
+  display: flex;
+  justify-content: space-between;
+}
+.choose .nub{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.choose .nub .btn {
+  border: 1px solid #ccc;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+}
+.choose .nub input {
+  width: 55rpx;
+  margin-left: 20rpx;
+}
+.tobuy{
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.cheack-all{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.cheack-all .iconfont {
+  color: #ff2d4a;
+  margin: 0 30rpx;
+}
+.price-all .the-price{
+  display: flex;
+}
+.price-all .the-price .all{
+  color: #ff2d4a;
+  font-size: 12px;
+}
+.price-all .the-price .all text{
+  font-size: 18px;
+}
+.price-all .freight{
+  color: #ccc;
+  font-size: 14px;
+}
+.gogogo{
+  width: 230rpx;
+  background-color: #ff2d4a;
+  color: #fff;
+  height: 100%;
+  text-align: center;
+  line-height: 100rpx;
+  margin-left: 10rpx;
 }
