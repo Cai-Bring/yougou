@@ -52,7 +52,7 @@
   background-color: #fff;
 }
 .products .iconfont{
-  color: #ff2d4a;
+  color: #eee;
   padding: 0 20rpx;
 }
 .products image{
@@ -118,7 +118,7 @@
   align-items: center;
 }
 .cheack-all .iconfont {
-  color: #ff2d4a;
+  color: #eee;
   margin: 0 30rpx;
 }
 .price-all .the-price{
@@ -143,4 +143,7 @@
   text-align: center;
   line-height: 100rpx;
   margin-left: 10rpx;
+}
+.active{
+  color: #ff2d4a !important;
 }

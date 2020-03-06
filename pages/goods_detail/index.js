@@ -72,7 +72,8 @@ Page({
       goods_name: this.data.list.goods_name,
       goods_price: this.data.list.goods_price,
       goods_small_logo: this.data.list.goods_small_logo,
-      number: 1
+      number: 1,
+      checked:true
     })
     // 存到本地
     wx.setStorageSync("goods", goods);

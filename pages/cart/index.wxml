@@ -16,7 +16,7 @@
  <!-- 产品详情 -->
  <view class="products" wx:for="{{list}}" wx:key="index">
   <!-- 产品选择 -->
-  <view class="iconfont icon-weibiaoti-"></view>
+  <view class="{{checked?'active':''}} iconfont icon-weibiaoti-"></view>
   <!-- 产品图片 -->
   <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
   <!-- 产品信息 -->
@@ -30,7 +30,7 @@
       <!-- 数量 -->
       <view class="nub">
       <view class="btn" bindtap="modify" data-index="{{index}}" data-val="-1">-</view>
-      <input value="{{item.number}}" type="number" bindconfirm="isok" confirm-type="done" bindinput="isinput" data-index="{{index}}"></input>
+      <input value="{{item.number}}" type="number" bindblur="isok" confirm-type="done" data-index="{{index}}"></input>
       <view class="btn" bindtap="modify" data-index="{{index}}" data-val="1">+</view>
       </view>
     </view>

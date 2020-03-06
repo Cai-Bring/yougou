@@ -100,7 +100,7 @@ Page({
     let val = e.detail.value
     const { index } = e.target.dataset
     // 如果输入不是数字或者输入结果小于0
-    if (!Boolean(+val) || val < 0) {
+    if (!Boolean(+val) || val < 0||val==0) {
       wx.showToast({
         title: '请正确输入',
         icon: 'none',
