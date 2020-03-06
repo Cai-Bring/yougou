@@ -14,23 +14,23 @@
   <view class="iconfont icon-shangdian"></view><text>蔡哥哥的生活馆</text>
  </view>
  <!-- 产品详情 -->
- <view class="products" wx:for="{{5}}" wx:key="index">
+ <view class="products" wx:for="{{list}}" wx:key="index">
   <!-- 产品选择 -->
   <view class="iconfont icon-weibiaoti-"></view>
   <!-- 产品图片 -->
-  <image src="http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_200x200.jpg" mode="widthFix"></image>
+  <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
   <!-- 产品信息 -->
   <view class="info">
     <!-- 产品描述 -->
-    <view class="describe">哈哈哈哈哈哈哈卢本伟牛逼卢本伟牛逼卢本伟牛逼卢本伟牛逼卢本伟牛逼</view>
+    <view class="describe">{{item.goods_name}}</view>
     <!-- 产品选择的数量 -->
     <view class="choose">
       <!-- 价格 -->
-      <view>￥<text>199</text>.00</view>
+      <view class="goods_price">￥<text>{{item.goods_price}}</text>.00</view>
       <!-- 数量 -->
       <view class="nub">
       <view class="btn">-</view>
-      <input value="1"></input>
+      <input value="{{item.number}}"></input>
       <view class="btn">+</view>
       </view>
     </view>

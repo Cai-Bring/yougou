@@ -79,6 +79,13 @@
   display: flex;
   justify-content: space-between;
 }
+.choose .goods_price{
+  color: #ff2d4a;
+  font-size: 12px;
+}
+.choose .goods_price text{
+  font-size: 18px;
+}
 .choose .nub{
   display: flex;
   align-items: center;
