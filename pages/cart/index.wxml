@@ -1,2 +1,11 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="content">
+  <!-- 联系方式 -->
+ <view class="contact">
+    <view class="linkman">收货人:　阿蔡</view>
+    <view class="phone">13421884489  <view class="iconfont icon-you"></view></view>
+ </view>
+ <!-- 地址 -->
+ <view class="address">收货地址: 广东省广州市天河区珠江新城桥下hhhhhhhhhhhh</view>
+ <!-- 图片 -->
+ <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
+</view>

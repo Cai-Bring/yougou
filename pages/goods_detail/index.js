@@ -20,7 +20,7 @@ Page({
         goods_id: options.goods_id
       }
     }).then(res=>{
-      console.log(res)
+      // console.log(res)
       this.setData({
         list:res.data.message
       })
