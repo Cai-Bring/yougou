@@ -54,14 +54,14 @@
       <button open-type="contact" class="btn"></button>
       </view>
       <view class="iconfont icon-kefu"></view>
-      <text>联系客服</text>XS
+      <text>联系客服</text>
     </view>
     <view class="mycar" bindtap="tocar">
       <view class="iconfont icon-gouwuche1"></view>
       <text>购物车</text>
     </view>
   </view>
-  <view class="tocar">
+  <view class="tocar" bindtap="to_storage">
   加入购物车
   </view>
   <view class="buy">立即购买</view>

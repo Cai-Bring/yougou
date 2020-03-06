@@ -52,5 +52,34 @@ Page({
     wx.switchTab({
       url: '/pages/cart/index'
     })
+  },
+  // 加入购物车
+  to_storage(){
+    const goods = wx.getStorageSync('goods')||[];
+    const ishave = goods.some(v=>{
+      return v.goods_id===this.data.list.goods_id
+    })
+    if(ishave){
+      wx.showToast({
+        title: '购物车已存在',
+        image: '../../images/icon_cart_active@3x.png',
+        duration: 2000
+      })
+      return;
+    }
+    goods.unshift({
+      goods_id: this.data.list.goods_id,
+      goods_name: this.data.list.goods_name,
+      goods_price: this.data.list.goods_price,
+      goods_small_logo: this.data.list.goods_small_logo,
+      number: 1
+    })
+    // 存到本地
+    wx.setStorageSync("goods", goods);
+    wx.showToast({
+      title: '加入购物车成功',
+      icon: 'success',
+      duration: 2000
+    })
   }
 })
