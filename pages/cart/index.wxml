@@ -46,7 +46,7 @@
  <!-- 价格 -->
   <view class="price-all">
    <view class="the-price">
-    合计：<view class="all">￥<text>1340</text>.00</view>
+    合计：<view class="all">￥<text>{{allprice}}</text>.00</view>
    </view>
    <view class="freight">包含运费</view>
   </view>

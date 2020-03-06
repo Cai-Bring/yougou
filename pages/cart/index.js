@@ -5,7 +5,8 @@ Page({
    */
   data: {
     user:{},
-    list:[] //本地存储 
+    list:[], //本地存储 
+    allprice:0
   },
   /**
    * 生命周期函数--监听页面加载
@@ -15,6 +16,7 @@ Page({
     this.setData({
       list: wx.getStorageSync('goods')||[]
     })
+    this.calculate()
   },
   /**
    * 生命周期函数--监听页面显示
@@ -24,6 +26,7 @@ Page({
     this.setData({
       list: wx.getStorageSync('goods') || []
     })
+    this.calculate()
   },
   // 获取地址
   choose_address(){
@@ -42,5 +45,17 @@ Page({
         // console.log(res.telNumber)
       }
     })
+  },
+  // 计算总价格
+  calculate(){
+    let price = 0
+    this.data.list.forEach(v=>{
+      price += v.goods_price * v.number
+    })
+    this.setData({
+      allprice:price
+    })
+    //每次点完加减都需要存储到本地存储，则将本地存储封装在计算里面
+    wx.setStorageSync("goods", this.data.list)
   }
 })
