@@ -57,5 +57,41 @@ Page({
     })
     //每次点完加减都需要存储到本地存储，则将本地存储封装在计算里面
     wx.setStorageSync("goods", this.data.list)
-  }
+  },
+  // 点击增加减少数量
+  modify(e){
+    // console.log(e)
+    let list = [...this.data.list]
+    // console.log(list)
+    const {index,val}= e.target.dataset
+    // console.log(index)
+    let number = list[index].number + +val
+    // +val是将val转换为数字类型
+    // console.log(number)
+    // 如果数量变为0
+    if(number==0){
+      wx.showModal({
+        title: '提示',
+        content: '是否删除商品',
+        success: (res) => {
+          // 确认删除
+          if (res.confirm) {
+            // 删除商品
+            list.splice(index, 1)
+            this.setData({
+              list: list
+            })
+            this.calculate();
+          }
+        }
+      })
+    }else{
+      // 如果不等于0，则将数量赋值给list中
+      list[index].number = number
+      this.setData({
+        list: list
+      })
+      this.calculate();
+    }
+  },
 })
