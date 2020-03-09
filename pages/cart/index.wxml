@@ -16,7 +16,7 @@
  <!-- 产品详情 -->
  <view class="products" wx:for="{{list}}" wx:key="index">
   <!-- 产品选择 -->
-  <view class="{{checked?'active':''}} iconfont icon-weibiaoti-"></view>
+  <view class="{{item.checked?'active':''}} iconfont icon-weibiaoti-" data-check="{{index}}" bindtap="ischecked"></view>
   <!-- 产品图片 -->
   <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
   <!-- 产品信息 -->
@@ -39,8 +39,8 @@
  <!-- 底部购物栏 -->
  <view class="tobuy">
  <!-- 全选 -->
- <view class="cheack-all">
-  <view class="iconfont icon-weibiaoti-"></view>
+ <view class="cheack-all" bindtap="ischeckedall">
+  <view class="iconfont {{checkedall?'active':''}} icon-weibiaoti-"></view>
   <text>全选</text>
  </view>
  <!-- 价格 -->

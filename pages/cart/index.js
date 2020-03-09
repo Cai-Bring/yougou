@@ -6,7 +6,8 @@ Page({
   data: {
     user:{},
     list:[], //本地存储 
-    allprice:0
+    allprice:0,
+    checkedall:true
   },
   /**
    * 生命周期函数--监听页面加载
@@ -17,6 +18,8 @@ Page({
       list: wx.getStorageSync('goods')||[]
     })
     this.calculate()
+    // 全选状态
+    this.ischeckedAll()
   },
   /**
    * 生命周期函数--监听页面显示
@@ -27,6 +30,8 @@ Page({
       list: wx.getStorageSync('goods') || []
     })
     this.calculate()
+    // 全选状态
+    this.ischeckedAll()
   },
   // 获取地址
   choose_address(){
@@ -50,6 +55,9 @@ Page({
   calculate(){
     let price = 0
     this.data.list.forEach(v=>{
+      if(v.checked===false){
+        return;
+      }
       price += v.goods_price * v.number
     })
     this.setData({
@@ -118,5 +126,54 @@ Page({
       })
       this.calculate()
     }
+  },
+  // 点击单选
+  ischecked(e){
+    // console.log(e)
+    const {check} = e.target.dataset
+    this.data.list[check].checked = !this.data.list[check].checked
+    let all = true
+    this.data.list.forEach(v=>{
+      if (all === false) {
+        return;
+      }
+      if (v.checked === false) {
+        all = false
+      }
+    })
+    this.setData({
+      list:this.data.list,
+      checkedall: all
+    })
+    this.calculate()
+    wx.setStorageSync("goods", this.data.list)
+  },
+  // 多选状态
+  ischeckedAll(){
+    let all = true
+    let list = wx.getStorageSync('goods') || []
+    list.forEach(v=>{
+      if(all===false){
+        return;
+      }
+      if(v.checked===false){
+        all=false
+      }
+    })
+    this.setData({
+      checkedall:all
+    })
+  },
+  // 点击多选
+  ischeckedall(){
+    let all = !this.data.checkedall
+    this.data.list.forEach(v=>{
+      v.checked = all
+    })
+    this.setData({
+      list:this.data.list,
+      checkedall:all
+    })
+    this.calculate()
   }
 })
